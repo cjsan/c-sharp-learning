@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "c-sharp-learning", "c-sharp-learning\c-sharp-learning.csproj", "{C9FA793C-AA1D-435B-BCFC-A49DFB48F19C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application", "Application\Application.csproj", "{B3D0A49F-CDB0-4F2B-80AC-9D03919E0F52}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,5 +15,9 @@ Global
 		{C9FA793C-AA1D-435B-BCFC-A49DFB48F19C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C9FA793C-AA1D-435B-BCFC-A49DFB48F19C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C9FA793C-AA1D-435B-BCFC-A49DFB48F19C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3D0A49F-CDB0-4F2B-80AC-9D03919E0F52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3D0A49F-CDB0-4F2B-80AC-9D03919E0F52}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3D0A49F-CDB0-4F2B-80AC-9D03919E0F52}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3D0A49F-CDB0-4F2B-80AC-9D03919E0F52}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
