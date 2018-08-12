@@ -1,7 +1,7 @@
 
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API", "c-sharp-learning\API.csproj", "{C9FA793C-AA1D-435B-BCFC-A49DFB48F19C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API", "API\API.csproj", "{C9FA793C-AA1D-435B-BCFC-A49DFB48F19C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application", "Application\Application.csproj", "{B3D0A49F-CDB0-4F2B-80AC-9D03919E0F52}"
 EndProject
