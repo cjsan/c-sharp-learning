@@ -23,7 +23,12 @@ namespace c_sharp_learning.Controllers
         public ActionResult<IEnumerable<string>> Get()
         {
             _greenhouse.SetSquareMeters(8);
-            return new string[] { "value1", "value2", _greenhouse.GetSquareMeters().ToString() };
+            var tallPlants = _greenhouse.GetPlantsTallerThan(0.9);
+
+            // https://docs.microsoft.com/en-us/aspnet/core/web-api/action-return-types?view=aspnetcore-2.1
+            return tallPlants.ToList();
+
+            //return new string[] { "value1", "value2", _greenhouse.GetSquareMeters().ToString() };
         }
 
         // GET api/values/5
