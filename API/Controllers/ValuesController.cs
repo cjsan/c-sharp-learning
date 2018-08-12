@@ -22,10 +22,8 @@ namespace c_sharp_learning.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<string>> Get()
         {
-            FirstClass firstClass = new FirstClass();
-            Console.Write(firstClass.HiThere());
-
-            return new string[] { "value1", "value2", firstClass.HiThere(), _greenhouse.SquareMeters().ToString() };
+            _greenhouse.SetSquareMeters(8);
+            return new string[] { "value1", "value2", _greenhouse.GetSquareMeters().ToString() };
         }
 
         // GET api/values/5

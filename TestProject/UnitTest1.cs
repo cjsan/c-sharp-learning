@@ -15,7 +15,8 @@ namespace TestProject
             int correctSquareMeters = 16;
 
             // ACT
-            int calculatedSquareMeters = greenhouse.SquareMeters();
+            greenhouse.SetSquareMeters(16);
+            int calculatedSquareMeters = greenhouse.GetSquareMeters();
 
             // ASSERT
             Assert.Equal(correctSquareMeters, calculatedSquareMeters);

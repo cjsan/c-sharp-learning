@@ -3,6 +3,7 @@ namespace Application
 {
     public interface IGreenhouse
     {
-        int SquareMeters();
+        void SetSquareMeters(int sqm);
+        int GetSquareMeters();
     }
 }

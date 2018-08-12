@@ -1,15 +1,29 @@
 ﻿using System;
+using System.Collections.Generic;
 namespace Application
 {
     public class Greenhouse : IGreenhouse
     {
+        private int? squareMeters = null;
+
         public Greenhouse()
         {
         }
 
-        public int SquareMeters()
+        public void SetSquareMeters(int sqm)
         {
-            return 16;
+            if (sqm < 1)
+                throw new ArgumentOutOfRangeException();
+
+            squareMeters = sqm;
+        }
+
+        public int GetSquareMeters()
+        {
+            if (squareMeters == null)
+                throw new NullReferenceException();
+
+            return (int) squareMeters;    
         }
     }
 }
@@ -17,7 +31,7 @@ namespace Application
 
 /* Todo
 
-Unit test
+-Unit test
 Exceptions
 Generics
 LINQ
