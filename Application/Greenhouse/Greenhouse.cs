@@ -43,19 +43,3 @@ namespace Application
         }
     }
 }
-
-
-/* Todo
-
--Unit test
--Exceptions
-Generics
--LINQ
-Async/Await
-Return types/data binding
-db/Entity framework/change tracking
-
-(Swagger/swashbuckle, obs applikation ej grundkunskap)
-
-*/
-  

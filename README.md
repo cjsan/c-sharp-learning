@@ -1,1 +1,21 @@
 # c-sharp-learning
+
+To learn:
+
+
+done:
+Unit test
+Exceptions
+LINQ
+
+next:
+Return types/data binding, https://docs.microsoft.com/en-us/aspnet/core/web-api/action-return-types?view=aspnetcore-2.1
+
+todo:
+Async/Await
+db/Entity framework/change tracking
+Generics
+
+(Swagger/swashbuckle, note application not core knowledge)
+
+  
