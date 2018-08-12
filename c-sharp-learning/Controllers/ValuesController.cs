@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Application;
 
 namespace c_sharp_learning.Controllers
 {
@@ -14,7 +15,10 @@ namespace c_sharp_learning.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<string>> Get()
         {
-            return new string[] { "value1", "value2" };
+            FirstClass firstClass = new FirstClass();
+            Console.Write(firstClass.HiThere());
+
+            return new string[] { "value1", "value2", firstClass.HiThere() };
         }
 
         // GET api/values/5
