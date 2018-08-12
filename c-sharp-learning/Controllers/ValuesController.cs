@@ -11,6 +11,13 @@ namespace c_sharp_learning.Controllers
     [ApiController]
     public class ValuesController : ControllerBase
     {
+        private IGreenhouse _greenhouse;
+
+        public ValuesController(IGreenhouse greenhouse)
+        {
+            _greenhouse = greenhouse;
+        }
+
         // GET api/values
         [HttpGet]
         public ActionResult<IEnumerable<string>> Get()
@@ -18,7 +25,7 @@ namespace c_sharp_learning.Controllers
             FirstClass firstClass = new FirstClass();
             Console.Write(firstClass.HiThere());
 
-            return new string[] { "value1", "value2", firstClass.HiThere() };
+            return new string[] { "value1", "value2", firstClass.HiThere(), _greenhouse.SquareMeters().ToString() };
         }
 
         // GET api/values/5
