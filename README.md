@@ -13,7 +13,7 @@ Return types https://docs.microsoft.com/en-us/aspnet/core/web-api/action-return-
 Async/Await  
 
 todo:  
-Data binding
+Data binding  
 db/Entity framework/change tracking, https://docs.microsoft.com/en-us/aspnet/core/tutorials/first-web-api-mac?view=aspnetcore-2.1  
 https://www.learnentityframeworkcore.com/dbcontext/change-tracker  
 
