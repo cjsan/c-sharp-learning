@@ -3,6 +3,7 @@ using Application;
 using Infrastructure.Models;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace Infrastructure.Repositories
 {
@@ -26,6 +27,12 @@ namespace Infrastructure.Repositories
         public IProduct GetProduct(long Id)
         {
             var product = _storeContext.Products.Find(Id);
+            return product;
+        }
+
+        public async Task<IProduct> GetProductAsync(long Id)
+        {
+            var product = await _storeContext.Products.FindAsync(Id);
             return product;
         }
 

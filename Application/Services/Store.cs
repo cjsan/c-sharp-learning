@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
+
 namespace Application
 {
     public class Store : IStore
@@ -20,6 +22,12 @@ namespace Application
         public IProduct GetProduct(long Id)
         {
             var product = _storeRepository.GetProduct(Id);
+            return product;
+        }
+
+        public async Task<IProduct> GetProductAsync(long Id)
+        {
+            var product = await _storeRepository.GetProductAsync(Id);
             return product;
         }
 

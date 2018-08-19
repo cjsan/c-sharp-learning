@@ -33,7 +33,7 @@ namespace c_sharp_learning.Controllers
             return Ok(products);
         }
 
-        // GET api/product/5
+        // GET api/store/5
         [HttpGet("{id}")]
         public ActionResult<Product> GetProduct(int id)
         {
@@ -44,6 +44,57 @@ namespace c_sharp_learning.Controllers
             else
                 return product;
         }
+
+        // Return types, https://docs.microsoft.com/en-us/aspnet/core/web-api/action-return-types?view=aspnetcore-2.1  
+        // Without known conditions to safeguard against during action execution, returning a specific type could suffice.
+        // GET api/store/specificreturntype
+        [HttpGet("specificreturntype")]
+        public IEnumerable<int> GetSpecType()
+        {
+            List<int> list = new List<int> {1, 2, 3, 5, 8};
+            return list;
+        }
+
+        /*
+         * When known conditions need to be accounted for in an action, 
+         * multiple return paths are introduced. 
+         * In such a case, it's common to mix an ActionResult return
+         * type with the primitive or complex return type. 
+         */
+
+        /*
+         * ASP.NET Core 2.1 introduces the ActionResult<T> return type for Web API 
+         * controller actions. It enables you to return a type deriving from 
+         * ActionResult or return a specific type.
+         */
+        // GET api/store/somesyncaction/5
+        [HttpGet("somesyncaction/{id}")]
+        public ActionResult<int> GetById(int id)
+        {
+            if (id != 5)
+            {
+                return BadRequest();
+            }
+
+            // Implicit cast operators support the conversion of both T and ActionResult to ActionResult<T>.
+            return id;
+        }
+
+
+        // GET api/store/someAsyncaction/5
+        [HttpGet("someAsyncaction/{id}")]
+        public async Task<ActionResult<Product>> GetByIdAsync(int id)
+        {
+            if (id != 5)
+            {
+                return BadRequest();
+            }
+
+            var product = await _store.GetProductAsync(id);
+
+            return (Product)product; // Not possible when returning interfaces
+        }
+
 
         // POST api/product
         [HttpPost]
